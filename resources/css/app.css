@@ -1,0 +1,29 @@
+@import 'bootstrap';
+
+
+:root {
+    --BtnColor: #0D4172;
+    --BtnHover: #0075e2;
+}
+
+*{
+    color: var(--BtnColor);
+}
+
+.customSize{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 3px;
+}
+
+.btnColor{
+    background-color: var(--BtnColor);
+}
+
+.btnColor:hover{
+    background-color: var(--BtnHover);
+}
+
+video {
+    max-width: 100%;
+}
