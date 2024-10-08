@@ -1,29 +1,196 @@
 @import 'bootstrap';
 
-
 :root {
     --BtnColor: #0D4172;
     --BtnHover: #0075e2;
+    --Bg: #001E39;
 }
-
 *{
     color: var(--BtnColor);
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
 }
-
 .customSize{
     width: 25px;
     height: 25px;
     margin-bottom: 3px;
 }
-
 .btnColor{
     background-color: var(--BtnColor);
 }
-
+.btnCostum {
+    background-color: var(--BtnColor);
+    width: 30rem;
+    margin-top: 100px;
+}
 .btnColor:hover{
     background-color: var(--BtnHover);
 }
-
+.bg{
+    background-color: var(--Bg);
+}
+.bgBtn{
+    background-color: var(--BtnColor);
+}
+.min-vh-25{
+    min-height: 25vh;
+}
+.min-vh-12{
+    min-height: 12vh;
+}
+.title{
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 video {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 85svh; /* Rimane il massimo, ma puoi modificarlo per una maggiore altezza */
+    aspect-ratio: 14 / 9; /* Imposta l'aspect ratio del video (modifica secondo le tue esigenze) */
+    object-fit: cover; /* Assicura che il video riempia l'area senza distorsione */
+}
+.imgCostum {
+    width: 100%;  /* L'immagine riempie la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    object-fit: cover; /* Assicura che l'immagine riempia il contenitore senza distorsione */
+}
+
+/* SECTION 3 HOMEPAGE*/
+
+.customPic{
+    width: 100%;
+}
+
+/*CARDS*/
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+}
+.card-custom {
+    width: 500px;
+    border: 1px solid var(--BtnColor);
+    overflow: hidden;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+.left {
+    align-self: flex-start; 
+}
+.right {
+    align-self: flex-end; 
+}
+.number-box {
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    padding: 0 30px 0 30px;
+    align-items: center;
+}
+.card-image {
+    width: 100%;
+    height: auto;
+}
+.borderCostum {
+    border-left: var(--BtnColor) 1px solid;
+    width: 100%;
+}
+.cardPic{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* SERVICE */
+
+.customLi{
+    color: white;
+    font-size: 20px;
+    margin-left: 40px;
+}
+.btnCustomServ {
+    background-color: white;
+    width: 19rem;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+.btnCustomServ:hover{
+    background-color: transparent;
+    color: white !important;
+    border: 1px solid white !important;
+}
+.list-square{
+    list-style: square;
+}
+
+/* FEEDBACKS SEC  */
+
+.feedContainer{
+    background-image: url('http://127.0.0.1:8000/media/truckRimorchio.webp');
+    width: 100%;
+    height: 45vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.carouselHeight{
+    height: fit-content;
+}
+
+/* FOOTER  */
+
+.footerHeight{
+    height: 35vh;
+}
+
+/* FORM */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+.buttonContact {
+    padding: 10px 15px;
+    background-color: var(--Bg);
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.buttonContact:hover {
+    background-color: #ffffff;
+    color: var(--Bg);
+    border: 1px solid var(--Bg);
+}
+
+.cntCs{
+    background-image: url('http://127.0.0.1:8000/media/daf.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
 }
