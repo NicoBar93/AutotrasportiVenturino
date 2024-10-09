@@ -1,5 +1,5 @@
 <x-layout>
-    <x-nav/>
+    <x-nav home="active"/>
     {{-- SECTION 1 w/Hns  --}}
     <div class="container-fluid mt-5 pt-5">
         <div class="row mb-2 min-vh-12">
@@ -14,7 +14,8 @@
     
     {{-- SECTION 2 w/VIDEO  --}}
     <div class="container-fluid position-relative px-0">
-        <video class="video" autoplay loop src="{{ asset('media/Video for web.mp4') }}" type="video/mp4">Il tuo browser non supporta il video.</video>
+        {{-- SOSTITUIRE CONTROLS CON AUTOPLAY  --}}
+        <video class="video" controls loop src="{{ asset('media/Video for web.mp4') }}" type="video/mp4">Il tuo browser non supporta il video.</video>
         <button class="border-0 text-white fw-bold btnColor position-absolute p-2 top-0 end-0 mt-5 me-5">RICHIEDI UN PREVENTIVO <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="customSize">
             <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" /></svg>
         </button>
@@ -94,20 +95,20 @@
             <div class="col-12 col-md-6 px-0">
                 <img src="{{ asset('media/truckNumbers.jpg')}}" alt="Truck Picture" class="">
             </div>
-            <div class="col-12 col-md-6 pe-5">
+            <div class="col-12 col-md-6">
                 <x-stat/>
             </div>
         </div>
     </div>
     
     {{-- SECTION 6 w/Feedbacks  --}}
-    <div class="container p-0 mx-0">
-        <div class="row feedContainer">
+    <div class="container-fluid p-0 mx-0 w-100 feedContainer">
+        <div class="row">
             <div class="col-12 ms-5 my-5">
                 <h2 class="display-6 fw-bold title mb-5">Cosa dicono di noi</h2>
                 <div class="col-5 bg-white carouselHeight border border-dark p-3">
                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
+                        <div class="carousel-inner position-relative">
                             <div class="carousel-item active">
                                 <div class="d-block w-100 mb-3">"Siamo estremamente soddisfatti del servizio offerto da Autotrasporti Venturino Pasquale. La loro capacità di gestire le richieste con efficienza e tempestività ci consente di mantenere le operazioni fluide e senza ritardi. La professionalità e l'affidabilità dimostrate in ogni consegna rendono questa collaborazione davvero preziosa."</div>
                                 <h5 class="fw-bold">Massimo - Sanigen S.r.l.</h5>
@@ -121,10 +122,10 @@
                                 <h5 class="fw-bold">Massimo - C.F.B. S.p.A.</h5>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <button class="carousel-control-prev bg-danger w-50" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <button class="carousel-control-next bg-danger w-50" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         </button>
                     </div>
@@ -134,7 +135,7 @@
     </div>
     
     {{-- SECTION 6 w/Question  --}}
-    <div class="container-fluid mt-5">
+    <div class="container-fluid ms-5 mt-5">
         <div class="row min-vh-25">
             <div class="col-12">
                 <h2 class="display-6 mb-4">Vorresti ampliare la tua area di consegna a tutto il territorio nazionale?</h2>

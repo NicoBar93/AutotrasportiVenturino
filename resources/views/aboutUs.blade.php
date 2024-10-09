@@ -1,5 +1,5 @@
 <x-layout>
-    <x-nav/>
+    <x-nav aboutUs="active"/>
     <div class="container-fluid mt-5 pt-5 ps-5">
         <div class="row min-vh-12">
             <div class="col-7">

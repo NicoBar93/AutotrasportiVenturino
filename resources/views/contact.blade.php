@@ -1,5 +1,5 @@
 <x-layout>
-    <x-nav/>
+    <x-nav contact="active" />
     <div class="container-fluid cntCs py-5 ">
         <div class="row">
             <div class="col-5">       
