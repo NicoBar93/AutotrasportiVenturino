@@ -1,5 +1,20 @@
 @import 'bootstrap';
 
+/* SCROLLBAR */
+
+/* html::-webkit-scrollbar{
+    width: 20px;
+}
+html::-webkit-scrollbar-track{
+    background-color:transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-image: url(LinQr.png);
+    background-size: 50px;
+    background-repeat: no-repeat, no-repeat;
+} */
+
+
 :root {
     --BtnColor: #0D4172;
     --BtnHover: #0075e2;
@@ -62,6 +77,15 @@ video {
     width: 100%;
 }
 
+.separator {
+    border-bottom: 1px solid #000; /* Linea sottile */
+    margin: 10px 0; /* Spazio sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 /* SECTION 5 HOMEPAGE */
 
 .cardStats{
@@ -69,7 +93,12 @@ video {
     height: 250px;
 }
 .customFont{
-    font-size: 60px;
+    font-size: 45px;
+}
+.imgNumbers{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /*CARDS*/
@@ -81,9 +110,9 @@ video {
     position: relative;
 }
 .card-custom {
-    width: 500px;
+    width: 470px;
     border: 1px solid var(--BtnColor);
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 10px 0;
     display: flex;
     flex-direction: column;
@@ -94,11 +123,57 @@ video {
 .right {
     align-self: flex-end; 
 }
+
+.right::before{
+    content: "";
+    position: absolute;
+    border: 0.1px solid #343a40;
+    width: 80px;
+    left: -80px;
+    top: -1px;    
+}
+.right::after{
+    content: "";
+    position: absolute;
+    border: 0.1px solid #343a40;
+    transform: rotate(90deg);
+    width: 412px;
+    left: -286px;
+    top: 205px;    
+}
+.left::before{
+    content: "";
+    position: absolute;
+    border: 0.1px solid #343a40;
+    width: 80px;
+    right: 558px;
+    top: 422px;    
+}
+.left::after{
+    content: "";
+    position: absolute;
+    border: 0.1px solid #343a40;
+    transform: rotate(90deg);
+    width: 412px;
+    right: 353px;
+    bottom: 606px;    
+}
+.customMargin{
+    margin-left: 12px;
+}
+.pseudoElement::before{
+    content: "";
+    position: absolute;
+    border: 0.1px solid #343a40;
+    transform: rotate(90deg);
+    width: 32px;
+    right: -4px;
+    bottom: 56px;
+}
+
 .number-box {
-    font-size: 48px;
-    font-weight: bold;
     display: flex;
-    padding: 0 30px 0 30px;
+    padding: 0 20px;
     align-items: center;
 }
 .card-image {
@@ -225,4 +300,70 @@ input[type="checkbox"] {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+}
+
+/* CARD ABOUT US */
+
+.cardAU {
+    position: relative;
+    width: 280px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--BtnColor);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 380px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+}
+
+.cardHeader .iconBox {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--Bg);
+    margin-right: 10px;
+}
+
+.cardContent {
+    flex-grow: 1;
+}
+
+.cardContent h2 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Questrial, sans-serif;
+    color: var(--Bg);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.cardContent p {
+    font-size: 15px;
+    color: var(--Bg);
+    font-family: "Questrial", sans-serif;
+    text-align: center;
+}
+
+.cardFooter {
+    background-color: var(--Bg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 7px;
+}
+
+.cardFooter svg {
+    width: 60px; 
+    height: 60px;
 }

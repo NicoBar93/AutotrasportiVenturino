@@ -72,8 +72,8 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <div class="ms-0 text-end">
+            <div class="col-6 customMargin position-relative">
+                <div class="ms-0 text-end pseudoElement">
                     <button class="border-0 text-white fw-bold btnColor p-2">RICHIEDI UN PREVENTIVO <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="customSize">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" /></svg>
                     </button>
@@ -86,25 +86,25 @@
     <div class="container-fluid my-5 ps-5 pt-5">
         <div class="row">
             <div class="col-12 col-md-5">
-                <h2 class="fs-1 title">I nostri numeri</h2>
+                <h2 class="fs-1 title fw-bold">I nostri numeri</h2>
             </div>
         </div>
     </div>
     <div class="container px-5 mb-5 pb-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 px-0">
-                <img src="{{ asset('media/truckNumbers.jpg')}}" alt="Truck Picture" class="">
+            <div class="col-12 col-md-6 pe-2" data-aos="zoom-out">
+                <img src="{{ asset('media/DafTruckNumbersSquare.png')}}" alt="Truck Picture" class="imgNumbers">
             </div>
             <div class="col-12 col-md-6">
-                <x-stat/>
+                <x-cardStats/>
             </div>
         </div>
     </div>
     
     {{-- SECTION 6 w/Feedbacks  --}}
     <div class="container-fluid p-0 mx-0 w-100 feedContainer">
-        <div class="row">
-            <div class="col-12 ms-5 my-5">
+        <div class="row me-0">
+            <div class="col-12 ps-5 my-5">
                 <h2 class="display-6 fw-bold title mb-5">Cosa dicono di noi</h2>
                 <div class="col-5 bg-white carouselHeight border border-dark p-3">
                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -135,7 +135,7 @@
     </div>
     
     {{-- SECTION 6 w/Question  --}}
-    <div class="container-fluid ms-5 mt-5">
+    <div class="container-fluid ps-5 mt-5">
         <div class="row min-vh-25">
             <div class="col-12">
                 <h2 class="display-6 mb-4">Vorresti ampliare la tua area di consegna a tutto il territorio nazionale?</h2>

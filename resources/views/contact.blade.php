@@ -12,14 +12,22 @@
                     <input type="text" id="citta-partenza" name="citta-partenza" required>
 
                     <label for="regione-partenza">Regione:*</label>
-                    <input type="text" id="regione-partenza" name="regione-partenza" required>
+                    <select class="form-select" aria-label="Seleziona la regione" name="regione-partenza" id="regione-partenza" required>
+                        @foreach ($regions as $region)
+                            <option value="{{$region->id}}">{{$region->name}}</option>
+                        @endforeach
+                    </select>
 
                     <h3>Destinazione:</h3>
                     <label for="citta-destinazione">Città:*</label>
                     <input type="text" id="citta-destinazione" name="citta-destinazione" required>
 
                     <label for="regione-destinazione">Regione:*</label>
-                    <input type="text" id="regione-destinazione" name="regione-destinazione" required>
+                    <select class="form-select" aria-label="Seleziona la regione" name="regione-partenza" id="regione-partenza" required>
+                        @foreach ($regions as $region)
+                            <option value="{{$region->id}}">{{$region->name}}</option>
+                        @endforeach
+                    </select>
 
                     <label for="data-consegna">Data richiesta di consegna:</label>
                     <input type="date" id="data-consegna" name="data-consegna">

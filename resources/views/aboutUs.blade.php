@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-    <x-stat/>
+    <x-cardAboutUs/>
 
     <x-footer />
 </x-layout>
