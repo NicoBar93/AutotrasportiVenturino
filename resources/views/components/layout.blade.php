@@ -16,6 +16,16 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+    @if (session('errorMessage'))
+        <div class="alert alert-danger text-center">
+            <p class="fs-4">{{session('errorMessage')}}</p>
+        </div>        
+    @endif
+    @if (session('message'))
+        <div class="alert alert-success text-center">
+            <p class="fs-4">{{session('message')}}</p>
+        </div>        
+    @endif
 
     <div class="min-vh-100">
         {{$slot}}

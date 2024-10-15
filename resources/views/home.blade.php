@@ -14,8 +14,8 @@
     
     {{-- SECTION 2 w/VIDEO  --}}
     <div class="container-fluid position-relative px-0">
-        {{-- SOSTITUIRE CONTROLS CON AUTOPLAY  --}}
-        <video class="video" controls loop src="{{ asset('media/Video for web.mp4') }}" type="video/mp4">Il tuo browser non supporta il video.</video>
+
+        <video class="video" autoplay loop src="{{ asset('media/Video for web.mp4') }}" type="video/mp4">Il tuo browser non supporta il video.</video>
         <button class="border-0 text-white fw-bold btnColor position-absolute p-2 top-0 end-0 mt-5 me-5">RICHIEDI UN PREVENTIVO <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="customSize">
             <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" /></svg>
         </button>

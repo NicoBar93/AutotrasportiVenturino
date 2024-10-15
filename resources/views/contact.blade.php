@@ -4,41 +4,51 @@
         <div class="row">
             <div class="col-5">       
                 <form action="{{route('contact.send')}}" method="POST">
-                    <label for="tipo-trasporto">Tipo di trasporto:*</label>
-                    <input type="text" id="tipo-trasporto" name="tipo-trasporto" required>
+                    @csrf
+                    <label for="tipoTrasporto">Tipo di trasporto:*</label>
+                    <select class="form-select" name="tipoTrasporto" id="tipoTrasporto" required>
+                        <option value="" disabled selected>Seleziona il tipo di trasporto</option>
+                        <option value="Motrice">Motrice</option>
+                        <option value="Motrice con Rimorchio">Motrice con Rimorchio</option>
+                        <option value="Merci ADR">Merci ADR</option>
+                    </select>
 
                     <h3>Da:</h3>
-                    <label for="citta-partenza">Città:*</label>
-                    <input type="text" id="citta-partenza" name="citta-partenza" required>
+                    <label for="cittaPartenza">Città:*</label>
+                    <input type="text" id="cittaPartenza" name="cittaPartenza" required>
 
-                    <label for="regione-partenza">Regione:*</label>
-                    <select class="form-select" aria-label="Seleziona la regione" name="regione-partenza" id="regione-partenza" required>
+                    <label for="regionePartenza">Regione:*</label>
+                    <select class="form-select" aria-label="Seleziona la regione" name="regionePartenza" id="regionePartenza" required>
+                        <option value="" disabled selected>Seleziona la regione</option>
                         @foreach ($regions as $region)
-                            <option value="{{$region->id}}">{{$region->name}}</option>
+                            <option value="{{$region->name}}">{{$region->name}}</option>
                         @endforeach
                     </select>
+                    
 
                     <h3>Destinazione:</h3>
-                    <label for="citta-destinazione">Città:*</label>
-                    <input type="text" id="citta-destinazione" name="citta-destinazione" required>
+                    <label for="cittaDestinazione">Città:*</label>
+                    <input type="text" id="cittaDestinazione" name="cittaDestinazione" required>
 
-                    <label for="regione-destinazione">Regione:*</label>
-                    <select class="form-select" aria-label="Seleziona la regione" name="regione-partenza" id="regione-partenza" required>
+                    <label for="regioneDestinazione">Regione:*</label>
+                    <select class="form-select" aria-label="Seleziona la regione" name="regioneDestinazione" id="regioneDestinazione" required>
+                        <option value="" disabled selected>Seleziona la regione</option>
                         @foreach ($regions as $region)
-                            <option value="{{$region->id}}">{{$region->name}}</option>
+                            <option value="{{$region->name}}">{{$region->name}}</option>
                         @endforeach
                     </select>
+                    
 
-                    <label for="data-consegna">Data richiesta di consegna:</label>
-                    <input type="date" id="data-consegna" name="data-consegna">
+                    <label for="dataConsegna">Data richiesta di consegna:</label>
+                    <input type="date" id="dataConsegna" name="dataConsegna">
 
                     <h3>Informazioni Carico:</h3>
-                    <label for="descrizione-carico">Gentilmente descrivete il vostro carico:</label>
-                    <textarea id="descrizione-carico" name="descrizione-carico" rows="4"></textarea>
+                    <label for="descrizioneCarico">Gentilmente descrivete il vostro carico:</label>
+                    <textarea id="descrizioneCarico" name="descrizioneCarico" rows="4"></textarea>
 
-                    <h3 class="mb-3">Servizi aggiuntivi richiesti:</h3>
-                    <label><input type="checkbox" id="assicurazione-carico" name="assicurazione-carico"> Assicurazione carico</label>
-                    <label><input type="checkbox" id="merci-infiammabili" name="merci-infiammabili"> Merci infiammabili</label>
+                    {{-- <h3 class="mb-3">Servizi aggiuntivi richiesti:</h3>
+                    <label><input type="checkbox" id="assicurazioneCarico" name="assicurazioneCarico"> Assicurazione carico</label>
+                    <label><input type="checkbox" id="merciInfiammabili" name="merciInfiammabili"> Merci infiammabili</label> --}}
 
                     <h3>Informazioni di contatto:</h3>
                     <label for="email">Email:*</label>
