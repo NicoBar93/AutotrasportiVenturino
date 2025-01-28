@@ -2,17 +2,17 @@
     <x-nav aboutUs="active"/>
     <div class="container-fluid mt-5 pt-5 ps-5">
         <div class="row min-vh-12">
-            <div class="col-7">
+            <div class="col-12 col-md-7">
                 <h1 class="display-4 fw-bold title">La nostra azienda</h1>
             </div>
         </div>
     </div>
     <div class="container-fluid py-5">
         <div class="row">
-            <div class="col-7 px-0">
+            <div class="col-12 col-lg-7 order-1 order-lg-2 px-0">
                 <img src="{{ asset('media/Camion.jpeg')}}" alt="Foto Camion Autotrasporti Venturino" class="imgCostum">
             </div>
-            <div class="col-5 bg">
+            <div class="col-12 col-lg-5 order-2 order-lg-1 bg customLayout">
                 <div class="row">
                     <div class="col-12">
                         <h2 class="text-white mt-5 ms-5 fs-1">Chi siamo</h2>
@@ -29,10 +29,10 @@
     </div>
     <div class="container-fluid mt-5 pt-5 ps-5">
         <div class="row">
-            <div class="col-7 pb-2">
+            <div class="col-12 col-md-7 pb-2">
                 <h2 class="display-6 fw-bold title">I nostri servizi</h2>
             </div>
-            <div class="col-7 pb-5">
+            <div class="col-12 col-md-7 pb-5">
                 <h3 class="fs-3 fw-bold title">Soluzioni di spedizione su misura per il tuo business</h3>
             </div>
         </div>

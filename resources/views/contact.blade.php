@@ -2,7 +2,7 @@
     <x-nav contact="active" />
     <div class="container-fluid cntCs py-5 ">
         <div class="row">
-            <div class="col-5">       
+            <div class="col-12 col-lg-5 opacityMedia">       
                 <form action="{{route('contact.send')}}" method="POST">
                     @csrf
                     <label for="tipoTrasporto">Tipo di trasporto:*</label>

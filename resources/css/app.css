@@ -1,36 +1,21 @@
-@import 'bootstrap';
-
-/* SCROLLBAR */
-
-/* html::-webkit-scrollbar{
-    width: 20px;
-}
-html::-webkit-scrollbar-track{
-    background-color:transparent;
-}
-html::-webkit-scrollbar-thumb{
-    background-image: url(LinQr.png);
-    background-size: 50px;
-    background-repeat: no-repeat, no-repeat;
-} */
-
+@import "bootstrap";
 
 :root {
-    --BtnColor: #0D4172;
+    --BtnColor: #0d4172;
     --BtnHover: #0075e2;
-    --Bg: #001E39;
+    --Bg: #001e39;
 }
-*{
+* {
     color: var(--BtnColor);
     font-family: Helvetica, sans-serif;
     font-size: 14px;
 }
-.customSize{
+.customSize {
     width: 25px;
     height: 25px;
     margin-bottom: 3px;
 }
-.btnColor{
+.btnColor {
     background-color: var(--BtnColor);
 }
 .btnCostum {
@@ -38,22 +23,22 @@ html::-webkit-scrollbar-thumb{
     width: 30rem;
     margin-top: 100px;
 }
-.btnColor:hover{
+.btnColor:hover {
     background-color: var(--BtnHover);
 }
-.bg{
+.bg {
     background-color: var(--Bg);
 }
-.bgBtn{
+.bgBtn {
     background-color: var(--BtnColor);
 }
-.min-vh-25{
+.min-vh-25 {
     min-height: 25vh;
 }
-.min-vh-12{
+.min-vh-12 {
     min-height: 12vh;
 }
-.title{
+.title {
     font-family: "Questrial", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -66,14 +51,27 @@ video {
     object-fit: cover; /* Assicura che il video riempia l'area senza distorsione */
 }
 .imgCostum {
-    width: 100%;  /* L'immagine riempie la larghezza del contenitore */
+    width: 100%; /* L'immagine riempie la larghezza del contenitore */
     height: auto; /* Mantiene le proporzioni dell'immagine */
     object-fit: cover; /* Assicura che l'immagine riempia il contenitore senza distorsione */
 }
 
+/* NAVBAR  */
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler.collapsed .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 4l22 22M26 4L4 26'/%3E%3C/svg%3E");
+}
+.logoNav {
+    width: 300px;
+    height: 170px;
+}
+
 /* SECTION 3 HOMEPAGE*/
 
-.customPic{
+.customPic {
     width: 100%;
 }
 
@@ -85,17 +83,16 @@ video {
     margin-right: auto;
 }
 
-
 /* SECTION 5 HOMEPAGE */
 
-.cardStats{
+.cardStats {
     width: 250px;
     height: 250px;
 }
-.customFont{
+.customFont {
     font-size: 45px;
 }
-.imgNumbers{
+.imgNumbers {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -106,7 +103,7 @@ video {
 .cardContainer {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     position: relative;
 }
 .card-custom {
@@ -118,50 +115,50 @@ video {
     flex-direction: column;
 }
 .left {
-    align-self: flex-start; 
+    align-self: flex-start;
 }
 .right {
-    align-self: flex-end; 
+    align-self: flex-end;
 }
 
-.right::before{
+.right::before {
     content: "";
     position: absolute;
     border: 0.1px solid #343a40;
     width: 80px;
     left: -80px;
-    top: -1px;    
+    top: -1px;
 }
-.right::after{
+.right::after {
     content: "";
     position: absolute;
     border: 0.1px solid #343a40;
     transform: rotate(90deg);
     width: 412px;
     left: -286px;
-    top: 205px;    
+    top: 205px;
 }
-.left::before{
+.left::before {
     content: "";
     position: absolute;
     border: 0.1px solid #343a40;
     width: 80px;
     right: 558px;
-    top: 422px;    
+    top: 422px;
 }
-.left::after{
+.left::after {
     content: "";
     position: absolute;
     border: 0.1px solid #343a40;
     transform: rotate(90deg);
     width: 412px;
     right: 353px;
-    bottom: 606px;    
+    bottom: 606px;
 }
-.customMargin{
+.customMargin {
     margin-left: 12px;
 }
-.pseudoElement::before{
+.pseudoElement::before {
     content: "";
     position: absolute;
     border: 0.1px solid #343a40;
@@ -184,7 +181,7 @@ video {
     border-left: var(--BtnColor) 1px solid;
     width: 100%;
 }
-.cardPic{
+.cardPic {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -192,7 +189,7 @@ video {
 
 /* SERVICE */
 
-.customLi{
+.customLi {
     color: white;
     font-size: 20px;
     margin-left: 40px;
@@ -203,19 +200,19 @@ video {
     margin-top: 70px;
     margin-left: 40px;
 }
-.btnCustomServ:hover{
+.btnCustomServ:hover {
     background-color: transparent;
     color: white !important;
     border: 1px solid white !important;
 }
-.list-square{
+.list-square {
     list-style: square;
 }
 
 /* FEEDBACKS SEC  */
 
-.feedContainer{
-    background-image: url('http://127.0.0.1:8000/media/truckRimorchio.webp');
+.feedContainer {
+    background-image: url("http://127.0.0.1:8000/media/truckRimorchio.webp");
     width: 100%;
     height: 50vh;
     object-fit: cover;
@@ -224,34 +221,45 @@ video {
     background-position: center;
     margin-bottom: 5vh;
 }
-.carouselHeight{
+.carouselHeight {
     height: fit-content;
 }
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
     background-color: black;
     position: absolute;
     bottom: -190px;
     right: 0;
     /* transform: translateX(-100%); */
 }
-.carousel-control-next-icon{
+.carousel-control-next-icon {
     background-color: black;
     position: absolute;
     bottom: -190px;
     left: 0;
     /* transform: translateX(-100%); */
 }
-.carousel-control-prev{
+.carousel-control-prev {
     max-height: fit-content;
 }
-.carousel-control-next{
+.carousel-control-next {
     max-height: fit-content;
 }
 
 /* FOOTER  */
 
-.footerHeight{
+.footerHeight {
     height: 35vh;
+}
+.logo {
+    width: 300px;
+    height: 170px;
+}
+.qrCoder {
+    width: 30px;
+    height: 30px;
+}
+.customPosition {
+    bottom: 0 !important;
 }
 
 /* FORM */
@@ -268,7 +276,9 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
 }
-input, textarea, select {
+input,
+textarea,
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -294,8 +304,8 @@ input[type="checkbox"] {
     border: 1px solid var(--Bg);
 }
 
-.cntCs{
-    background-image: url('http://127.0.0.1:8000/media/daf.jpg');
+.cntCs {
+    background-image: url("http://127.0.0.1:8000/media/daf.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -364,6 +374,395 @@ input[type="checkbox"] {
 }
 
 .cardFooter svg {
-    width: 60px; 
+    width: 60px;
     height: 60px;
+}
+
+@media screen and (max-width: 430px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* BUTTON FOR VIDEO SECTION ONE  */
+
+    .btnForMedia {
+        display: none;
+    }
+
+    /* SECTION 3 ABOUT US */
+
+    .customBorderForMedia {
+        border: none !important;
+        text-align: center;
+        margin-left: 30px;
+    }
+    .marginBtnMedia {
+        margin-left: 30px;
+    }
+
+    /* SECTION 4 "COME VIAGGIA LA TUA MERCE" */
+
+    .card-custom {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .right::before {
+        display: none;
+    }
+    .pseudoElement::before {
+        display: none;
+    }
+    .pseudoElement {
+        text-align: center !important;
+        margin-top: -20px;
+    }
+
+    /* SECTION 5 "I NOSTRI NUMERI"  */
+
+    .cardStats {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+        margin-bottom: -5px !important;
+    }
+    .customFont {
+        font-size: 15px;
+    }
+    .cardStatForMedia {
+        font-size: 20px;
+        padding: 0px !important;
+    }
+    .titleForMedia {
+        font-size: 12px;
+    }
+    .cardBodyMedia {
+        padding: 10px !important;
+    }
+    .wrapMedia {
+        padding: 3px !important;
+    }
+    .NoMarginMedia {
+        margin: 3px !important;
+    }
+
+    /* SECTION 6 "FEEDBACKS"  */
+
+    .sizeForMedia {
+        font-size: 11px;
+    }
+    .carouselHeight {
+        opacity: 0.75;
+        width: 100%;
+        padding: 8px !important;
+        /* height: 178px; */
+        margin-top: 40%;
+    }
+    .carousel-control-prev-icon {
+        display: none;
+    }
+    .carousel-control-next-icon {
+        display: none;
+    }
+    .questForMedia {
+        font-size: 22px;
+        text-align: center;
+        margin-right: 15px;
+    }
+    .lastBtnMedia {
+        text-align: center;
+    }
+
+    /* FOOTER  */
+
+    .logo {
+        width: 200px;
+        height: 130px;
+        margin-bottom: 90px;
+        margin-left: 50%;
+        margin-right: 50%;
+        transform: translateX(-50%);
+    }
+    .footerHeight {
+        height: auto;
+    }
+    .customSize {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 3px;
+    }
+    .footerTitleMedia {
+        font-size: 15px !important;
+    }
+
+    /* CONTACT PAGE  */
+
+    .opacityMedia {
+        opacity: 0.92;
+    }
+
+    /* AREE SERVITE PAGE  */
+
+    .imgCostum {
+        transform: scale(1.1);
+        margin-top: 25px;
+    }
+    .btnCustomServ {
+        background-color: white;
+        width: 19rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 40px;
+    }
+    .customLi {
+        font-size: 15px;
+    }
+    .sizeMedia {
+        font-size: 15px !important;
+    }
+    .cardAU {
+        width: 280px;
+        padding: 7px;
+        min-height: 300px;
+    }
+    .cardContent {
+        margin-bottom: 5px !important;
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 768px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* BUTTON FOR VIDEO SECTION ONE  */
+
+    .btnForMedia {
+        display: none;
+    }
+
+    /* SECTION 4 "COME VIAGGIA LA TUA MERCE" */
+
+    .right::before {
+        display: none;
+    }
+    .right::after {
+        display: none;
+    }
+    .left::before {
+        display: none;
+    }
+    .left::after {
+        display: none;
+    }
+    .pseudoElement::before {
+        display: none;
+    }
+    .pseudoElement {
+        text-align: center !important;
+        margin-top: 25px;
+    }
+    .card-custom {
+        width: 65%;
+    }
+
+    /* SECTION 5 "STATS"  */
+
+    .cardStatForMedia {
+        padding-bottom: 15px !important;
+    }
+
+    /* SECTION 6 "FEEDBACKS"  */
+
+    .sizeForMedia {
+        font-size: 14px;
+    }
+    .carouselHeight {
+        opacity: 0.75;
+        width: 80%;
+        padding: 10px !important;
+        margin-top: 28%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .carousel-control-prev-icon {
+        display: none;
+    }
+    .carousel-control-next-icon {
+        display: none;
+    }
+
+    /* FOOTER  */
+
+    .logo {
+        width: 220px;
+        height: 130px;
+        margin-bottom: 90px;
+        margin-left: 50%;
+        margin-right: 50%;
+        transform: translateX(-50%);
+    }
+    .customSize {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 3px;
+    }
+    .footerTitleMedia {
+        font-size: 15px !important;
+    }
+
+    /* AREE SERVITE PAGE  */
+
+    .imgCostum {
+        transform: scale(1.07);
+        margin-top: 45px;
+    }
+    .btnCustomServ {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* ABOUT US  */
+
+    .cardAU {
+        width: 280px;
+        padding: 7px;
+        min-height: 300px;
+    }
+    .cardContent {
+        margin-bottom: 5px !important;
+    }
+
+    /* CONTACT PAGE  */
+
+    .opacityMedia {
+        opacity: 0.9;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* BUTTON FOR VIDEO SECTION ONE  */
+
+    .btnForMedia {
+        display: none;
+    }
+
+    /* SECTION 4 "COME VIAGGIA LA TUA MERCE" */
+
+    .right::before {
+        display: none;
+    }
+    .right::after {
+        display: none;
+    }
+    .left::before {
+        display: none;
+    }
+    .left::after {
+        display: none;
+    }
+    .pseudoElement::before {
+        display: none;
+    }
+    .pseudoElement {
+        text-align: center !important;
+        margin-top: 25px;
+    }
+    .card-custom {
+        width: 65%;
+    }
+
+    /* SECTION 6 "FEEDBACKS"  */
+
+    .sizeForMedia {
+        font-size: 14px;
+    }
+    .carouselHeight {
+        opacity: 0.75;
+        width: 80%;
+        padding: 10px !important;
+        margin-top: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .carousel-control-prev-icon {
+        top: 118px;
+    }
+    .carousel-control-next-icon {
+        top: 118px;
+    }
+
+    /* FOOTER  */
+
+    .logo {
+        width: 240px;
+        height: 150px;
+        margin-bottom: 90px;
+        margin-left: 50%;
+        margin-right: 50%;
+        transform: translateX(-50%);
+    }
+    .customSize {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 3px;
+    }
+    .footerTitleMedia {
+        font-size: 15px !important;
+    }
+
+    /* AREE SERVITE PAGE  */
+
+    .imgCostum {
+        margin-top: 45px;
+    }
+    .btnCustomServ {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* ABOUT US  */
+
+    .cardAU {
+        width: 280px;
+        padding: 10px;
+        min-height: 300px;
+    }
+    .cardContent {
+        margin-bottom: 5px !important;
+    }
+    .customLayout {
+        padding-bottom: 40px;
+        padding-right: 80px;
+    }
+
+    /* CONTACT PAGE  */
+
+    .opacityMedia {
+        opacity: 0.9;
+    }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1199px) {
+    .right::before {
+        display: none;
+    }
+    .right::after {
+        display: none;
+    }
+    .left::before {
+        display: none;
+    }
+    .left::after {
+        display: none;
+    }
 }
